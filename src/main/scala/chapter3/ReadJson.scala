@@ -1,16 +1,11 @@
 package com.guzelcihad.spark
 package chapter3
 
-import org.apache.spark.sql.SparkSession
+import SparkObject.spark
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types._
 
 object ReadJson extends App {
-
-  val spark = SparkSession
-    .builder()
-    .appName("Read Json")
-    .getOrCreate()
 
   if (args.length <= 0) {
     println("Usage example <file path to blogs.json>")

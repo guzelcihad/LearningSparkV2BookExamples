@@ -1,16 +1,11 @@
 package com.guzelcihad.spark
 package chapter3
 
-import org.apache.spark.sql.SparkSession
+import SparkObject.spark
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types._
 
 object ReadCsv extends App {
-
-  val spark = SparkSession
-    .builder()
-    .appName("Read Csv")
-    .getOrCreate()
 
   val fireSchema = StructType(Array(StructField("CallNumber", IntegerType, true),
     StructField("UnitId", StringType, true),

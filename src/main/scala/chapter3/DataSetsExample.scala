@@ -3,8 +3,6 @@ package chapter3
 
 import SparkObject.spark
 
-import org.apache.spark.sql.functions.expr
-
 object DataSetsExample extends App {
 
   import spark.sqlContext.implicits._

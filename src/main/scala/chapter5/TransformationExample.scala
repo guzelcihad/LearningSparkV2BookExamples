@@ -5,7 +5,7 @@ import SparkObject.spark
 
 import org.apache.spark.sql.functions.expr
 
-object TransformationExamples extends App {
+object TransformationExample extends App {
 
   import spark.sqlContext.implicits._
 
