@@ -68,4 +68,5 @@ object ReadJson extends App {
   // Sort by column "Id" in descending order
   blogsDF.sort(col("Id").desc).show()
   //blogsDF.sort($"Id".desc).show()
+
 }

@@ -36,6 +36,7 @@ object DataSetExampleInDepth extends App {
   }
 
   dsUsage.map(computeUserCostUsage(_)).show(5, false)
+
 }
 
 // uid: unique id, uname: randomly generated user name, usage: minutes of server usage
