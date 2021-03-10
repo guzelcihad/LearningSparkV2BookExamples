@@ -16,7 +16,7 @@ object FirstStreamingApp extends App {
     .option("port", 9999)
     .load()
 
-  val filteredLines = lines.filter("isCorruptedUdf(value) = false")
+  //val filteredLines = lines.filter("isCorruptedUdf(value) = false")
   val words = lines.select(split(col("value"), "\\s").alias("word"))
   val counts = words.groupBy("word").count()
 
@@ -30,4 +30,5 @@ object FirstStreamingApp extends App {
     .start()
 
   streamingQuery.awaitTermination()
+  streamingQuery.lastProgress
 }
